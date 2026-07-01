@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">💡 LinguaUp</div>
+        <ul class="nav-links">
+            <li><a href="#lessons">Lessons</a></li>
+            <li><a href="#quiz-section">Quiz</a></li>
+            <li><a href="#exercise-section">Exercises</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Master English Faster</h1>
+        <p>Interactive quizzes and real-time translation practices.</p>
+    </header>
+
+    <main class="container">
+        <!-- Lessons Section -->
+        <section id="lessons" class="section">
+            <h2 class="section-title">Daily Bite-Sized Lessons</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="badge grammar">Grammar</span>
+                    <h3>Present Continuous</h3>
+                    <p>Use <strong>Subject + am/is/are + Verb-ing</strong> for actions happening right now.</p>
+                    <p class="example"><em>Example: "She is studying English."</em></p>
+                </div>
+                <div class="card">
+                    <span class="badge vocab">Vocabulary</span>
+                    <h3>Idiom: "Break a leg"</h3>
+                    <p>This phrase means <strong>"Good luck"</strong>. It is commonly used in theater and performances.</p>
+                    <p class="example"><em>Example: "Break a leg tonight at your recital!"</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="section">
+            <h2 class="section-title">Multiple Choice Quiz</h2>
+            <div class="app-box">
+                <div id="quiz-container">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="options-container" class="options-grid"></div>
+                </div>
+                <div id="quiz-feedback" class="feedback hidden"></div>
+                <button id="next-quiz-btn" class="btn hidden">Next Question</button>
+            </div>
+        </section>
+
+        <!-- Interactive Exercise Section -->
+        <section id="exercise-section" class="section">
+            <h2 class="section-title">Sentence Builder Exercise</h2>
+            <div class="app-box">
+                <h3>Translate to English: <span class="highlight">"Ella lee un libro."</span></h3>
+                <p class="instruction">Arrange the words in the correct order:</p>
+                
+                <div id="word-bank" class="word-bank">
+                    <!-- Words injected by JS -->
+                </div>
+
+                <div id="workspace" class="workspace">
+                    <p class="placeholder-text">Click words above to build your sentence</p>
+                </div>
+
+                <div class="action-bar">
+                    <button id="check-exercise-btn" class="btn">Check Answer</button>
+                    <button id="reset-exercise-btn" class="btn btn-secondary">Reset</button>
+                </div>
+                <div id="exercise-feedback" class="feedback hidden"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LinguaUp Platform. Clear paths to language mastery.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
