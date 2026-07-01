@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com;">
+    <title>LearnEnglish - Master the Language</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-graduation-cap"></i> LearnEnglish</a>
+            <div class="score-badge">Score: <span id="user-score">0</span> XP</div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <header class="hero-section fade-in">
+            <h1>Level Up Your English</h1>
+            <p>Challenge yourself with our interactive, intermediate-level exercises and quizzes.</p>
+        </header>
+
+        <section class="card-container">
+            
+            <div class="card slide-up">
+                <div class="card-header">
+                    <h2><i class="fa-solid fa-book-open"></i> Daily Exercise</h2>
+                    <span class="difficulty medium">Medium</span>
+                </div>
+                <p class="instruction">Sentence Transformation: Rewrite the sentence securely below using the word provided in brackets so it means the same.</p>
+                <div class="exercise-box">
+                    <p class="prompt">"I last saw him three years ago." <strong>(FOR)</strong></p>
+                    <div class="input-group">
+                        <label for="exercise-input" class="sr-only">Your Answer</label>
+                        <input type="text" id="exercise-input" placeholder="Type your answer securely here..." autocomplete="off">
+                        <button id="submit-exercise" class="btn btn-primary">Check Answer</button>
+                    </div>
+                </div>
+                <div id="exercise-feedback" class="feedback"></div>
+            </div>
+
+            <div class="card slide-up delay-1">
+                <div class="card-header">
+                    <h2><i class="fa-solid fa-brain"></i> Grammar & Idioms Quiz</h2>
+                    <span class="difficulty medium">Medium</span>
+                </div>
+                <div id="quiz-wrapper">
+                    <p id="quiz-question" class="question-text">Loading question...</p>
+                    <div id="quiz-options" class="options-grid">
+                        </div>
+                </div>
+                <div id="quiz-feedback" class="feedback"></div>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="secure-modal" class="modal hidden">
+        <div class="modal-content animate-pop">
+            <i class="fa-solid fa-circle-check modal-icon"></i>
+            <h3 id="modal-title">Success!</h3>
+            <p id="modal-message">You did great!</p>
+            <button id="close-modal" class="btn btn-secondary">Continue</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
